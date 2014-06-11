@@ -8,7 +8,8 @@ AC_PREREQ([2.61])
 AC_CONFIG_AUX_DIR([config])
 AM_INIT_AUTOMAKE([parallel-tests foreign -Wall])
 AM_SILENT_RULES([yes])
-AM_PROG_AR
+m4_pattern_allow([m4_esyscmd_s], [m4_esyscmd_s])
+m4_pattern_allow([AM_PROG_AR], [AM_PROG_AR])
 AC_PROG_CC
 AC_PROG_CC_STDC
 AC_PROG_CPP_WERROR
